@@ -1,0 +1,13 @@
+Name,SASColumnType,ReadFlag,Desc,Length,SASFormat,SASInformat
+Gender,C,Y,Gender,1,$1.,$1.
+Age,N,Y,Age,8,BEST12.,BEST32.
+Urea,N,Y,Urea,8,BEST12.,BEST32.
+Cr,N,Y,Creatinine,8,BEST12.,BEST32.
+HbA1c,N,Y,Glycated Hemoglobin,8,BEST12.,BEST32.
+Chol,N,Y,Cholesterol,8,BEST12.,BEST32.
+TG,N,Y,Triglycerides,8,BEST12.,BEST32.
+HDL,N,Y,High-Density Lipoprotein,8,BEST12.,BEST32.
+LDL,N,Y,Low-Density Lipoprotein,8,BEST12.,BEST32.
+VLDL,N,Y,Very Low-Density Lipoprotein,8,BEST12.,BEST32.
+BMI,N,Y,Body Mass Index,8,BEST12.,BEST32.
+Class,C,Y,Diabetes Code,1,$1.,$1.

@@ -8,13 +8,11 @@
 * SOURCEDATASET is the name of the source SAS dataset and
 * SOURCEVARIABLE is the name of the source SAS variable.
 *---------------------------------------------------------------*;
-%include "C:common.sas";
-
 
 proc import 
-    datafile="C:\SDTM_METADATA.xls"
+    datafile="&path/SDTM/Programs/SDTM_METADATA.xlsx"
     out=formatdata 
-    dbms=excelcs 
+    dbms=xlsx
     replace; 
     sheet="CODELISTS";
 run;

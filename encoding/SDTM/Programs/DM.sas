@@ -2,10 +2,10 @@
 * DM.sas creates the SDTM DM and SUPPDM datasets and saves them
 * as permanent SAS datasets to the target libref.
 *---------------------------------------------------------------*;
-%include "C:common.sas";
+
 
 **** CREATE EMPTY DM DATASET CALLED EMPTY_DM;
-%make_empty_dataset(metadatafile=C:SDTM_METADATA.xls,dataset=DM)
+%make_empty_dataset(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=DM)
  
 **** GET FIRST AND LAST DOSE DATE FOR RFSTDTC AND RFENDTC;
 proc sort
@@ -81,7 +81,7 @@ run;
 
 **** DEFINE SUPPDM FOR OTHER RACE; 
 **** CREATE EMPTY SUPPDM DATASET CALLED EMPTY_SUPPDM;
-%make_empty_dataset(metadatafile=C:SDTM_metadata\SDTM_METADATA.xls,dataset=SUPPDM)
+%make_empty_dataset(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=SUPPDM)
 
 data suppdm;
   set EMPTY_SUPPDM
@@ -114,7 +114,7 @@ run;
 
 
 **** SORT DM ACCORDING TO METADATA AND SAVE PERMANENT DATASET;
-%make_sort_order(metadatafile=C:SDTM_METADATA.xls,dataset=DM)
+%make_sort_order(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=DM)
 
 proc sort
   data=dm(keep = &DMKEEPSTRING)
@@ -124,7 +124,7 @@ run;
 
 
 **** SORT SUPPDM ACCORDING TO METADATA AND SAVE PERMANENT DATASET;
-%make_sort_order(metadatafile=C:SDTM_METADATA.xls,dataset=SUPPDM)
+%make_sort_order(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=SUPPDM)
 
 proc sort
   data=suppdm

@@ -8,3 +8,5 @@ options ls=256 nocenter
         mautosource 
         SASAUTOS = ( SASAUTOS,    
                     "&path/macros");
+
+                    proc options option=sasautos; run; 

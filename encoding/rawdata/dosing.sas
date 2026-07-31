@@ -1,6 +1,3 @@
-**** define common SAS setings;
-%include "C:\common.sas";
-
 
 **** INPUT SAMPLE DOSING DATA;
 data source.dosing;

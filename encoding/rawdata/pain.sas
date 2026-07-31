@@ -1,6 +1,3 @@
-**** define common SAS setings;
-%include "C:\common.sas";
-
 **** INPUT SAMPLE EFFICACY PAIN DATA;
 data source.pain;
 label subject  = "Subject Number"

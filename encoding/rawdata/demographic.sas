@@ -1,5 +1,3 @@
-**** define common SAS setings;
-%include "C:\common.sas";
 
 proc format;
    value trt

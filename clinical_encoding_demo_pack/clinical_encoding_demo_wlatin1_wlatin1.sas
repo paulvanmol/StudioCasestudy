@@ -31,12 +31,12 @@ Important
 options mprint mlogic symbolgen msglevel=i validvarname=upcase;
 
 /* Change this root path to a writable path on your SAS Compute server. */
-%let _demo_root = %sysfunc(pathname(WORK))/clinenc_demo;
+%let _demo_root = /home/student/StudioCasestudy/clinical_encoding_demo_pack;
 
 /* Create directories. Works on Linux-based SAS Viya compute servers. */
-options noxwait xsync;
-x "mkdir -p &_demo_root/legacy_sdtm &_demo_root/legacy_adam &_demo_root/xpt &_demo_root/utf8_migrate &_demo_root/reports";
 
+*x "mkdir -p &_demo_root/legacy_sdtm &_demo_root/legacy_adam &_demo_root/xpt &_demo_root/utf8_migrate &_demo_root/reports";
+options dlcreatedir; 
 libname SDTM   "&_demo_root/legacy_sdtm";
 libname ADAM   "&_demo_root/legacy_adam";
 libname MIGU8  "&_demo_root/utf8_migrate";
@@ -77,7 +77,7 @@ run;
 %macro create_index(lib=, data=, indexname=, vars=);
   proc datasets lib=&lib nolist;
     modify &data;
-    index create &indexname = (&vars);
+    index create &indexname ;
   quit;
 %mend;
 

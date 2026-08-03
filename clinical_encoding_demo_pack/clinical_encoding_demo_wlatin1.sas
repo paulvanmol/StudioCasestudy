@@ -31,12 +31,11 @@ Important
 options mprint mlogic symbolgen msglevel=i validvarname=upcase;
 
 /* Change this root path to a writable path on your SAS Compute server. */
-%let _demo_root = %sysfunc(pathname(WORK))/clinenc_demo;
+%let _demo_root =/home/student/StudioCasestudy/clinical_encoding_demo_pack;
 
 /* Create directories. Works on Linux-based SAS Viya compute servers. */
-options noxwait xsync;
 x "mkdir -p &_demo_root/legacy_sdtm &_demo_root/legacy_adam &_demo_root/xpt &_demo_root/utf8_migrate &_demo_root/reports";
-
+options dlcreatedir; 
 libname SDTM   "&_demo_root/legacy_sdtm";
 libname ADAM   "&_demo_root/legacy_adam";
 libname MIGU8  "&_demo_root/utf8_migrate";
@@ -96,11 +95,11 @@ data SDTM.DM(label='Demographics');
         BRTHDTC :$10. SITEID :$6. SEX :$1. RACE :$40. ETHNIC :$30. ARMCD :$8.
         ARM :$40. COUNTRY :$3. INVNAM :$60. CITY :$40. COMMENT :$80.;
 datalines;
-ENCODE01|DM|ENCODE01-001-0001|0001|2026-01-15|2026-03-15|1978-05-21|001|F|WHITE|NOT HISPANIC OR LATINO|DRUGA|Drug A 50 mg|FRA|Dr François Lemaître|Lyon|Legacy note: crème brûlée preference
-ENCODE01|DM|ENCODE01-001-0002|0002|2026-01-16|2026-03-16|1969-11-02|001|M|WHITE|NOT HISPANIC OR LATINO|PBO|Placebo|BEL|Dr Chloé Dubois|Liège|Accent check: déjà vu and naïve text
-ENCODE01|DM|ENCODE01-002-0003|0003|2026-01-17|2026-03-20|1985-07-14|002|F|WHITE|NOT HISPANIC OR LATINO|DRUGB|Drug B 100 mg|DEU|Dr Jürgen Müller|München|German umlaut: Größe and Straße
-ENCODE01|DM|ENCODE01-002-0004|0004|2026-01-19|2026-03-21|1958-02-08|002|M|WHITE|NOT HISPANIC OR LATINO|DRUGA|Drug A 50 mg|ESP|Dr José García|Sevilla|Spanish name: señor and año
-ENCODE01|DM|ENCODE01-003-0005|0005|2026-01-20|2026-03-22|1991-09-30|003|F|WHITE|NOT HISPANIC OR LATINO|PBO|Placebo|SWE|Dr Åsa Björk|Göteborg|Nordic letters: Å Ä Ö
+ENCODE01|DM|ENCODE01-001-0001|0001|2026-01-15|2026-03-15|1978-05-21|001|F|WHITE|NOT HISPANIC OR LATINO|DRUGA|Drug A 50 mg|FRA|Dr Franï¿½ois Lemaï¿½tre|Lyon|Legacy note: crï¿½me brï¿½lï¿½e preference
+ENCODE01|DM|ENCODE01-001-0002|0002|2026-01-16|2026-03-16|1969-11-02|001|M|WHITE|NOT HISPANIC OR LATINO|PBO|Placebo|BEL|Dr Chloï¿½ Dubois|Liï¿½ge|Accent check: dï¿½jï¿½ vu and naï¿½ve text
+ENCODE01|DM|ENCODE01-002-0003|0003|2026-01-17|2026-03-20|1985-07-14|002|F|WHITE|NOT HISPANIC OR LATINO|DRUGB|Drug B 100 mg|DEU|Dr Jï¿½rgen Mï¿½ller|Mï¿½nchen|German umlaut: Grï¿½ï¿½e and Straï¿½e
+ENCODE01|DM|ENCODE01-002-0004|0004|2026-01-19|2026-03-21|1958-02-08|002|M|WHITE|NOT HISPANIC OR LATINO|DRUGA|Drug A 50 mg|ESP|Dr Josï¿½ Garcï¿½a|Sevilla|Spanish name: seï¿½or and aï¿½o
+ENCODE01|DM|ENCODE01-003-0005|0005|2026-01-20|2026-03-22|1991-09-30|003|F|WHITE|NOT HISPANIC OR LATINO|PBO|Placebo|SWE|Dr ï¿½sa Bjï¿½rk|Gï¿½teborg|Nordic letters: ï¿½ ï¿½ ï¿½
 ;
 run;
 
@@ -113,11 +112,11 @@ data SDTM.AE(label='Adverse Events');
         AEBODSYS :$60. AESTDTC :$10. AEENDTC :$10. AESEV :$8. AESER :$1.
         AEREL :$18. AEOUT :$24. COMMENT :$100.;
 datalines;
-ENCODE01|AE|ENCODE01-001-0001|1|Headache after café intake|HEADACHE|NERVOUS SYSTEM DISORDERS|2026-01-20|2026-01-21|MILD|N|NOT RELATED|RECOVERED|Investigator text includes café
-ENCODE01|AE|ENCODE01-001-0002|1|Nausea, déjà vu sensation|NAUSEA|GASTROINTESTINAL DISORDERS|2026-01-22|2026-01-23|MODERATE|N|POSSIBLY RELATED|RECOVERED|Reported in Liège
-ENCODE01|AE|ENCODE01-002-0003|1|Injection-site pruritus|PRURITUS|SKIN DISORDERS|2026-01-25|2026-01-27|MILD|N|RELATED|RECOVERED|German note Straße
-ENCODE01|AE|ENCODE01-002-0004|1|Fatigue - señor reported tiredness|FATIGUE|GENERAL DISORDERS|2026-01-28|2026-02-02|MODERATE|N|POSSIBLY RELATED|RECOVERED|Spanish accent in verbatim
-ENCODE01|AE|ENCODE01-003-0005|1|Dizziness after 100 mg dose|DIZZINESS|NERVOUS SYSTEM DISORDERS|2026-01-30|2026-02-01|SEVERE|Y|RELATED|RECOVERED|Includes micro symbol in lab: 5 µmol/L
+ENCODE01|AE|ENCODE01-001-0001|1|Headache after cafï¿½ intake|HEADACHE|NERVOUS SYSTEM DISORDERS|2026-01-20|2026-01-21|MILD|N|NOT RELATED|RECOVERED|Investigator text includes cafï¿½
+ENCODE01|AE|ENCODE01-001-0002|1|Nausea, dï¿½jï¿½ vu sensation|NAUSEA|GASTROINTESTINAL DISORDERS|2026-01-22|2026-01-23|MODERATE|N|POSSIBLY RELATED|RECOVERED|Reported in Liï¿½ge
+ENCODE01|AE|ENCODE01-002-0003|1|Injection-site pruritus|PRURITUS|SKIN DISORDERS|2026-01-25|2026-01-27|MILD|N|RELATED|RECOVERED|German note Straï¿½e
+ENCODE01|AE|ENCODE01-002-0004|1|Fatigue - seï¿½or reported tiredness|FATIGUE|GENERAL DISORDERS|2026-01-28|2026-02-02|MODERATE|N|POSSIBLY RELATED|RECOVERED|Spanish accent in verbatim
+ENCODE01|AE|ENCODE01-003-0005|1|Dizziness after 100 mg dose|DIZZINESS|NERVOUS SYSTEM DISORDERS|2026-01-30|2026-02-01|SEVERE|Y|RELATED|RECOVERED|Includes micro symbol in lab: 5 ï¿½mol/L
 ;
 run;
 
@@ -129,11 +128,11 @@ data SDTM.LB(label='Laboratory Test Results');
         LBCAT :$40. LBORRES :$20. LBORRESU :$12. LBSTRESC :$20. LBSTRESU :$12.
         LBDTC :$10. LBNAM :$60. COMMENT :$80.;
 datalines;
-ENCODE01|LB|ENCODE01-001-0001|1|ALT|Alanine Aminotransferase|CHEMISTRY|32|U/L|32|U/L|2026-01-15|Laboratoire Saint-Étienne|Contains Étienne
-ENCODE01|LB|ENCODE01-001-0002|1|CRP|C-Reactive Protein|CHEMISTRY|4.2|mg/L|4.2|mg/L|2026-01-16|Clinique de Liège|Contains Liège
-ENCODE01|LB|ENCODE01-002-0003|1|CREAT|Creatinine|CHEMISTRY|82|µmol/L|82|µmol/L|2026-01-17|München Zentrallabor|Contains µ and ü
-ENCODE01|LB|ENCODE01-002-0004|1|HGB|Hemoglobin|HEMATOLOGY|13.3|g/dL|13.3|g/dL|2026-01-19|Laboratorio José García|Contains José García
-ENCODE01|LB|ENCODE01-003-0005|1|BILI|Bilirubin|CHEMISTRY|11|µmol/L|11|µmol/L|2026-01-20|Göteborg Kliniskt Lab|Contains Göteborg
+ENCODE01|LB|ENCODE01-001-0001|1|ALT|Alanine Aminotransferase|CHEMISTRY|32|U/L|32|U/L|2026-01-15|Laboratoire Saint-ï¿½tienne|Contains ï¿½tienne
+ENCODE01|LB|ENCODE01-001-0002|1|CRP|C-Reactive Protein|CHEMISTRY|4.2|mg/L|4.2|mg/L|2026-01-16|Clinique de Liï¿½ge|Contains Liï¿½ge
+ENCODE01|LB|ENCODE01-002-0003|1|CREAT|Creatinine|CHEMISTRY|82|ï¿½mol/L|82|ï¿½mol/L|2026-01-17|Mï¿½nchen Zentrallabor|Contains ï¿½ and ï¿½
+ENCODE01|LB|ENCODE01-002-0004|1|HGB|Hemoglobin|HEMATOLOGY|13.3|g/dL|13.3|g/dL|2026-01-19|Laboratorio Josï¿½ Garcï¿½a|Contains Josï¿½ Garcï¿½a
+ENCODE01|LB|ENCODE01-003-0005|1|BILI|Bilirubin|CHEMISTRY|11|ï¿½mol/L|11|ï¿½mol/L|2026-01-20|Gï¿½teborg Kliniskt Lab|Contains Gï¿½teborg
 ;
 run;
 

@@ -29,9 +29,10 @@
   filename src "/path/to/00_create_sample_sdtm_adam_wlatin1.sas" encoding="utf-8";
   %include src;
   ------------------------------------------------------------------------*/
-
-%let outpath = /demo/latin1;   /* <-- adjust to a real path before running */
-
+options dlcreatedir;
+%let outpath = /home/student/StudioCasestudy/demo/latin1;   /* <-- adjust to a real path before running */
+libname latin1 "&outpath.";
+libname latin1 clear; 
 libname sdtm  "&outpath./sdtm";
 libname adam  "&outpath./adam";
 libname xpt5  xport "&outpath./xpt/sdtm_adam.xpt";  /* single-member demo target */

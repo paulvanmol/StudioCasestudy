@@ -1,4 +1,4 @@
-﻿/*****************************************************************************
+/*****************************************************************************
 Clinical Trial Encoding Demo for SAS Viya / SAS Studio
 Developed for: SAS Viya demo of legacy Windows WLATIN1 clinical programs
 Author: Paul Van Mol / generated with Microsoft Copilot
@@ -77,7 +77,7 @@ run;
 %macro create_index(lib=, data=, indexname=, vars=);
   proc datasets lib=&lib nolist;
     modify &data;
-    index create &indexname = (&vars);
+    index create &indexname ;
   quit;
 %mend;
 

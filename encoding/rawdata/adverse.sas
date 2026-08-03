@@ -1,5 +1,3 @@
-**** define common SAS setings;
-%include "C:\common.sas";
 
 **** INPUT SAMPLE ADVERSE EVENT DATA.;
 data source.adverse;

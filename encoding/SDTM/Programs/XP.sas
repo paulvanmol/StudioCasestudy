@@ -2,10 +2,10 @@
 * XP.sas creates the SDTM XP dataset and saves it
 * as a permanent SAS datasets to the target libref.
 *---------------------------------------------------------------*;
-%include "C:common.sas";
+
  
 **** CREATE EMPTY DM DATASET CALLED EMPTY_XP;
-%make_empty_dataset(metadatafile=C:SDTM_METADATA.xls,dataset=XP)
+%make_empty_dataset(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=XP)
  
 proc format;
   value pain
@@ -95,7 +95,7 @@ run;
 
 
 **** SORT XP ACCORDING TO METADATA AND SAVE PERMANENT DATASET;
-%make_sort_order(metadatafile=C:SDTM_METADATA.xls,dataset=XP)
+%make_sort_order(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=XP)
 
 
 proc sort

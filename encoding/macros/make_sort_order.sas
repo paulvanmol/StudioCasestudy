@@ -12,7 +12,7 @@
     proc import 
         datafile="&metadatafile"
         out=_temp 
-        dbms=excelcs
+        dbms=xlsx
         replace;
         sheet="VARIABLE_METADATA";
     run;

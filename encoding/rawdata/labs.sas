@@ -1,5 +1,3 @@
-**** define common SAS setings;
-%include "C:\common.sas";
 
 **** INPUT SAMPLE LABORATORY DATA;
 data source.labs;

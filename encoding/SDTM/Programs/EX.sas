@@ -2,10 +2,9 @@
 * EX.sas creates the SDTM EX dataset and saves it
 * as a permanent SAS datasets to the target libref.
 *---------------------------------------------------------------*;
-%include "C:common.sas";
- 
+
 **** CREATE EMPTY EX DATASET CALLED EMPTY_EX;
-%make_empty_dataset(metadatafile=C:SDTM_METADATA.xls,dataset=EX)
+%make_empty_dataset(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=EX)
  
 
 **** DERIVE THE MAJORITY OF SDTM EX VARIABLES;
@@ -68,7 +67,7 @@ run;
 
 **** SORT EX ACCORDING TO METADATA AND SAVE PERMANENT DATASET;
 options mlogic mprint source source2;
-%make_sort_order(metadatafile=C:SDTM_METADATA.xls,dataset=EX)
+%make_sort_order(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=EX)
 
 proc sort
   data=ex(keep = &EXKEEPSTRING)

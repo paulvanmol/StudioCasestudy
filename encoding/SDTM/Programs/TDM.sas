@@ -5,16 +5,15 @@
 
 options source;
 **** define common SAS setings;
-%include "C:common.sas";
 
  
 **** CREATE EMPTY TA DATASET CALLED EMPTY_TA;
-%make_empty_dataset(metadatafile=C:SDTM_metadata\SDTM_METADATA.xls,dataset=TA)
+%make_empty_dataset(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=TA)
 
 proc import 
-  datafile="C:trialdesign.xls"
+  datafile="/home/student/StudioCasestudy/encoding/SDTM/Data/trialdesign.xls"
   out=ta 
-  dbms=excelcs
+  dbms=xls
   replace;
   sheet='TA';
 run;
@@ -26,7 +25,7 @@ data ta;
 run;
 
 **** SORT DOMAIN ACCORDING TO METADATA AND SAVE PERMANENT DATASET;
-%make_sort_order(metadatafile=C:SDTM_METADATA.xls,dataset=TA)
+%make_sort_order(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=TA)
 
 proc sort
   data=ta(keep = &TAKEEPSTRING)
@@ -36,12 +35,12 @@ run;
 
 
 **** CREATE EMPTY TD DATASET CALLED EMPTY_TD;
-%make_empty_dataset(metadatafile=C:SDTM_METADATA.xls,dataset=TD)
+%make_empty_dataset(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=TD)
 
 proc import 
-  datafile="C:trialdesign.xls"
+  datafile="&path/SDTM/Data/trialdesign.xls"
   out=td
-  dbms=excelcs
+  dbms=xls
   replace;
   sheet='TD';
 run;
@@ -53,7 +52,7 @@ data td;
 run;
 
 **** SORT DOMAIN ACCORDING TO METADATA AND SAVE PERMANENT DATASET;
-%make_sort_order(metadatafile=C:SDTM_METADATA.xls,dataset=TD)
+%make_sort_order(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=TD)
 
 proc sort
   data=td(keep = &TDKEEPSTRING)
@@ -63,12 +62,12 @@ run;
 
 
 **** CREATE EMPTY TE DATASET CALLED EMPTY_TE;
-%make_empty_dataset(metadatafile=C:SDTM_METADATA.xls,dataset=TE)
+%make_empty_dataset(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=TE)
 
 proc import 
-  datafile="C:trialdesign.xls"
+  datafile="&path/SDTM/Data/trialdesign.xls"
   out=te
-  dbms=excelcs
+  dbms=xls
   replace;
   sheet='TE';
 run;
@@ -80,7 +79,7 @@ data te;
 run;
 
 **** SORT DOMAIN ACCORDING TO METADATA AND SAVE PERMANENT DATASET;
-%make_sort_order(metadatafile=C:SDTM_METADATA.xls,dataset=TE)
+%make_sort_order(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=TE)
 
 proc sort
   data=te(keep = &TEKEEPSTRING)
@@ -91,12 +90,12 @@ run;
 
 
 **** CREATE EMPTY TI DATASET CALLED EMPTY_TI;
-%make_empty_dataset(metadatafile=C:SDTM_METADATA.xls,dataset=TI)
+%make_empty_dataset(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=TI)
 
 proc import 
-  datafile="C:trialdesign.xls"
+  datafile="&path/SDTM/Data/trialdesign.xls"
   out=ti 
-  dbms=excelcs
+  dbms=xls
   replace;
   sheet='TI';
 run;
@@ -108,7 +107,7 @@ data ti;
 run;
 
 **** SORT DOMAIN ACCORDING TO METADATA AND SAVE PERMANENT DATASET;
-%make_sort_order(metadatafile=C:SDTM_METADATA.xls,dataset=TI)
+%make_sort_order(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=TI)
 
 proc sort
   data=ti(keep = &TIKEEPSTRING)
@@ -119,12 +118,12 @@ run;
 
 
 **** CREATE EMPTY TS DATASET CALLED EMPTY_TS;
-%make_empty_dataset(metadatafile=C:SDTM_METADATA.xls,dataset=TS)
+%make_empty_dataset(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=TS)
 
 proc import 
-  datafile="C:trialdesign.xls"
+  datafile="&path/SDTM/Data/trialdesign.xls"
   out=ts 
-  dbms=excelcs
+  dbms=xls
   replace;
   sheet='TS';
 run;
@@ -136,7 +135,7 @@ data ts;
 run;
 
 **** SORT DOMAIN ACCORDING TO METADATA AND SAVE PERMANENT DATASET;
-%make_sort_order(metadatafile=C:SDTM_METADATA.xls,dataset=TS)
+%make_sort_order(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=TS)
 
 proc sort
   data=ts(keep = &TSKEEPSTRING)
@@ -147,12 +146,12 @@ run;
 
 
 **** CREATE EMPTY TV DATASET CALLED EMPTY_TV;
-%make_empty_dataset(metadatafile=C:SDTM_METADATA.xls,dataset=TV)
+%make_empty_dataset(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=TV)
 
 proc import 
-  datafile="C:trialdesign.xls"
+  datafile="&path/SDTM/Data/trialdesign.xls"
   out=tv 
-  dbms=excelcs
+  dbms=xls
   replace;
   sheet='TV';
 run;
@@ -164,7 +163,7 @@ data tv;
 run;
 
 **** SORT DOMAIN ACCORDING TO METADATA AND SAVE PERMANENT DATASET;
-%make_sort_order(metadatafile=C:SDTM_METADATA.xls,dataset=TV)
+%make_sort_order(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=TV)
 
 proc sort
   data=tv(keep = &TVKEEPSTRING)

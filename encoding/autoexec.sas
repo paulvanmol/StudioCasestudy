@@ -1,4 +1,4 @@
-%let path=%substr(&_sasprogramfile,1,%index(&_sasprogramfile,common.sas)-1);
+%let path=%substr(&_sasprogramfile,1,%index(&_sasprogramfile,autoexec.sas)-2);
 libname source "&path/rawdata";
 libname library "&path/library";
 libname target "&path/SDTM/Data";
@@ -8,3 +8,5 @@ options ls=256 nocenter
         mautosource 
         SASAUTOS = ( SASAUTOS,    
                     "&path/macros");
+
+                    proc options option=sasautos; run; 

@@ -4,7 +4,7 @@
 options mprint mlogic symbolgen msglevel=i validvarname=upcase;
 
 /* Change this root path to a writable path on your SAS Compute server. */
-%let _demo_root = /home/student/StudioCasestudy/clinical_encoding_demo_pack;
+%let _demo_root = /home/student/StudioCasestudy/clinical_encoding_demo;
 
 /* Create directories. Works on Linux-based SAS Viya compute servers. */
 

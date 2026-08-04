@@ -41,6 +41,7 @@ options dlcreatedir;
 libname SDTM   "&_demo_root/legacy_sdtm";
 libname ADAM   "&_demo_root/legacy_adam";
 libname MIGU8  "&_demo_root/utf8_migrate";
+libname xpt    "&_demo_root/xpt";
 
 %put NOTE: Demo root is &_demo_root;
 %put NOTE: Current SAS session encoding is %sysfunc(getoption(encoding));
@@ -60,6 +61,7 @@ proc format lib=sdtm cntlout=sdtm.formats;
   value $sev     'MILD'='Mild' 'MODERATE'='Moderate' 'SEVERE'='Severe';
   value $rel     'NOT RELATED'='Not Related' 'POSSIBLY RELATED'='Possibly Related' 'RELATED'='Related';
 run;
+options fmtsearch=(work sdtm library);
 
 %macro show_encoding(lib=, mem=);
   title "Encoding and descriptor check: &lib..&mem";

@@ -32,11 +32,12 @@ options mprint mlogic symbolgen msglevel=i validvarname=upcase;
 
 /* Change this root path to a writable path on your SAS Compute server. */
 %let _demo_root = %sysfunc(pathname(WORK))/clinenc_demo;
+%let _demo_root = /home/student/StudioCasestudy/clinical_encoding_demo;
 
-/* Create directories. Works on Linux-based SAS Viya compute servers. */
+/* Create directories. Works on Linux-based SAS Viya compute servers with allowXCMD enabled  */
 options noxwait xsync;
-x "mkdir -p &_demo_root/legacy_sdtm &_demo_root/legacy_adam &_demo_root/xpt &_demo_root/utf8_migrate &_demo_root/reports";
-
+/*x "mkdir -p &_demo_root/legacy_sdtm &_demo_root/legacy_adam &_demo_root/xpt &_demo_root/utf8_migrate &_demo_root/reports";*/
+options dlcreatedir;
 libname SDTM   "&_demo_root/legacy_sdtm";
 libname ADAM   "&_demo_root/legacy_adam";
 libname MIGU8  "&_demo_root/utf8_migrate";
@@ -52,7 +53,7 @@ title;
 /*=============================================================================
   1. Helper formats and macro utilities
 =============================================================================*/
-proc format;
+proc format lib=sdtm cntlout=sdtm.formats;
   value $sex     'M'='Male' 'F'='Female';
   value $yn      'Y'='Yes' 'N'='No';
   value $trt     'PBO'='Placebo' 'DRUGA'='Drug A 50 mg' 'DRUGB'='Drug B 100 mg';
@@ -77,7 +78,7 @@ run;
 %macro create_index(lib=, data=, indexname=, vars=);
   proc datasets lib=&lib nolist;
     modify &data;
-    index create &indexname = (&vars);
+    index create &indexname ;
   quit;
 %mend;
 

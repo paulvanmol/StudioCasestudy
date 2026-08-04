@@ -35,7 +35,7 @@ options mprint mlogic symbolgen msglevel=i validvarname=upcase;
 %let _demo_root = /home/student/StudioCasestudy/clinical_encoding_demo;
 
 /* Create directories. Works on Linux-based SAS Viya compute servers with allowXCMD enabled  */
-options noxwait xsync;
+*options noxwait xsync;
 /*x "mkdir -p &_demo_root/legacy_sdtm &_demo_root/legacy_adam &_demo_root/xpt &_demo_root/utf8_migrate &_demo_root/reports";*/
 options dlcreatedir;
 libname SDTM   "&_demo_root/legacy_sdtm";

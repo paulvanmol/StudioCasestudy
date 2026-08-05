@@ -19,7 +19,7 @@
 
     proc sort
 	data=_temp;
-	where keysequence ne . and domain="&dataset";
+	where keysequence not is missing and domain="&dataset";
 	by keysequence;
     run;
 

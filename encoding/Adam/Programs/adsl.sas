@@ -3,11 +3,10 @@
 * as permanent SAS datasets to the ADaM libref.
 *------------------------------------------------------------*;
 
-%include "setup.sas";
 
 **** CREATE EMPTY ADSL DATASET CALLED EMPTY_ADSL;
 
-%let metadatafile=&path/chapter07/adam_metadata.xlsx;
+%let metadatafile==&path/Adam/ADAM_METADATA.xlsx;
 %make_empty_dataset(metadatafile=&metadatafile, dataset=ADSL) 
 
 ** merge supplemental qualifiers into DM;

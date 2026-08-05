@@ -186,7 +186,8 @@ data _null_;
                'DEVHOST ', /* SAS Institute Internal */
                'ALXOSF  ', /* Digital UNIX */
                '386 ABI ', /* Intel ABI */
-               'MIPS ABI'  /* MIPS ABI */
+               'MIPS ABI',  /* MIPS ABI */
+			   'LIN X64' /*LIN X64*/
               );
 
   *-----determine if we are on a PC-----*;

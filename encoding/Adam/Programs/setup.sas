@@ -9,8 +9,8 @@ options ls=256 nocenter extendobscounter=NO
         sasautos=(SASAUTOS, "&path/macros")
         ;
 %include "&path/macros/xpt_macros.sas";
-libname sdtm    "&path/SDTM";
-libname adam    "&path/Adam";
+libname sdtm    "&path/SDTM/Data";
+libname adam    "&path/Adam/Data";
 
 
 proc format;

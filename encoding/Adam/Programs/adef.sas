@@ -3,12 +3,11 @@
 * for efficacy data (ADEF), saved to the ADaM libref.
 *---------------------------------------------------------------*;
 
-%include "setup.sas";
 
 
 **** CREATE EMPTY ADEF DATASET CALLED EMPTY_ADEF;
 options mprint ;*symbolgen;
-%let metadatafile=&path/chapter07/adam_metadata.xlsx;
+%let metadatafile=&path/Adam/ADAM_METADATA.xlsx;
 %make_empty_dataset(metadatafile=&metadatafile,dataset=ADEF)
 
 proc sort

@@ -3,11 +3,11 @@
 * for a time-to-event analysis (ADTTE), saved to the ADaM libref.
 *---------------------------------------------------------------*;
 
-%include "setup.sas";
+
 
 **** CREATE EMPTY ADTTE DATASET CALLED EMPTY_ADTTE;
 options mprint ;*symbolgen;
-%let metadatafile=&path/chapter07/adam_metadata.xlsx;
+%let metadatafile=&path/Adam/ADAM_METADATA.xlsx;
 %make_empty_dataset(metadatafile=&metadatafile, dataset=ADTTE)
 
 proc sort

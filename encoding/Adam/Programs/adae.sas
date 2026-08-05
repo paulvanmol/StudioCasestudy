@@ -3,12 +3,11 @@
 * for AE data (ADAE), saved to the ADaM libref.
 *---------------------------------------------------------------*;
 
-%include "setup.sas";
 
 
 **** CREATE EMPTY ADAE DATASET CALLED EMPTY_ADAE;
 options mprint ;*symbolgen;
-%let metadatafile=&path/chapter07/adam_metadata.xlsx;
+%let metadatafile=&path/Adam/ADAM_METADATA.xlsx;
 %make_empty_dataset(metadatafile=&metadatafile,dataset=ADAE)
 
 

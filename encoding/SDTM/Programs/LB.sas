@@ -2,11 +2,11 @@
 * LB.sas creates the SDTM LB dataset and saves it
 * as a permanent SAS datasets to the target libref.
 *---------------------------------------------------------------*;
-%include "C:common.sas";
+
 
 
 **** CREATE EMPTY DM DATASET CALLED EMPTY_LB;
-%make_empty_dataset(metadatafile=C:SDTM_METADATA.xls,dataset=LB)
+%make_empty_dataset(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=LB)
  
 
 **** DERIVE THE MAJORITY OF SDTM LB VARIABLES;
@@ -112,7 +112,7 @@ run;
 
 
 **** SORT LB ACCORDING TO METADATA AND SAVE PERMANENT DATASET;
-%make_sort_order(metadatafile=C:SDTM_METADATA.xls,dataset=LB)
+%make_sort_order(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=LB)
 
 proc sort
   data=lb(keep = &LBKEEPSTRING)

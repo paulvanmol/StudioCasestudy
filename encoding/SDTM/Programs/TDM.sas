@@ -11,7 +11,7 @@ options source;
 %make_empty_dataset(metadatafile=&path/SDTM/Programs/SDTM_METADATA.xlsx,dataset=TA)
 
 proc import 
-  datafile="/home/student/StudioCasestudy/encoding/SDTM/Data/trialdesign.xls"
+  datafile="&path/SDTM/Data/trialdesign.xls"
   out=ta 
   dbms=xls
   replace;

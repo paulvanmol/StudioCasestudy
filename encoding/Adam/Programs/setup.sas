@@ -2,15 +2,15 @@
 
 %let sasroot=%sysfunc(sysget(SASROOT));
 %let sysin = %sysfunc(getoption(sysin));
-%let path=%substr(&sysin,1,%index(%upcase(&sysin),\CHAPTER07\)-1);
+%let path=%substr(&_sasprogramfile,1,%index(%upcase(&_sasprogramfile),/ADAM/)-1);
 %put sasroot=&sasroot path=&path;
 
 options ls=256 nocenter extendobscounter=NO
-        sasautos=("&sasroot/core/sasmacro", "../macros")
+        sasautos=(SASAUTOS, "&path/macros")
         ;
-%include "..\macros\xpt_macros.sas";
-libname sdtm    "&path/chapter03";
-libname adam    "&path/chapter07";
+%include "&path/macros/xpt_macros.sas";
+libname sdtm    "&path/SDTM";
+libname adam    "&path/Adam";
 
 
 proc format;
@@ -49,4 +49,3 @@ proc format;
                        3 = 'COMPLETED STUDY PRIOR TO RELIEF'
         ;                    
 run;
-

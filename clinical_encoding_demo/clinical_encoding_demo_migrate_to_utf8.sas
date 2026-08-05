@@ -13,6 +13,8 @@ options dlcreatedir;
 libname SDTM   "&_demo_root/sdtm";
 libname ADAM   "&_demo_root/adam";
 libname MIGU8  "&_demo_root/utf8_migrate";
+libname reports "&_demo_root/reports";
+libname reports clear; 
 
 %put NOTE: Demo root is &_demo_root;
 %put NOTE: Current SAS session encoding is %sysfunc(getoption(encoding));
@@ -25,14 +27,14 @@ title;
 /*=============================================================================
   1. Helper formats and macro utilities
 =============================================================================*/
-proc format ;
+proc format lib=sdtm ;
   value $sex     'M'='Male' 'F'='Female';
   value $yn      'Y'='Yes' 'N'='No';
   value $trt     'PBO'='Placebo' 'DRUGA'='Drug A 50 mg' 'DRUGB'='Drug B 100 mg';
   value $sev     'MILD'='Mild' 'MODERATE'='Moderate' 'SEVERE'='Severe';
   value $rel     'NOT RELATED'='Not Related' 'POSSIBLY RELATED'='Possibly Related' 'RELATED'='Related';
 run;
-
+options fmtsearch=(work sdtm library);
 %macro show_encoding(lib=, mem=);
   title "Encoding and descriptor check: &lib..&mem";
   proc contents data=&lib..&mem varnum; run;
@@ -96,7 +98,7 @@ run;
 proc datasets lib=migpref kill;
 quit; 
 libname ADAMCVP cvp "&_demo_root/legacy_adam" cvpmultiplier=2;
-libname MIGPREF "&_demo_root/utf8_migrate_proc_migrate";
+libname MIGPREF "&_demo_root/utf8_migrate";
 proc migrate in=ADAMCVP out=MIGPREF;
 run;
 %show_encoding(lib=MIGPREF, mem=ADSL);

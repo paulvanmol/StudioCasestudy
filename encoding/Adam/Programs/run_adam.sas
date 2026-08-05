@@ -12,7 +12,7 @@ options nomstored extendobscounter=NO; *symbolgen;
 %include "&progpath/adtte.sas";
 
 %include "&path/macros/xpt_macros.sas";
-%let outdir=&path/Adam/xpt;
+%let outdir=&path/Adam/Data/xpt;
 %let  indir=&path/Adam/Data;
 %toexp(&indir, &outdir);
 

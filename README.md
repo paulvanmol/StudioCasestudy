@@ -81,7 +81,7 @@ SAS Visual Analytics
      |
      v
 DiabetesFinal Report
-
+```
 ---
 
 ## 2. Clinical Encoding and UTF-8 Migration

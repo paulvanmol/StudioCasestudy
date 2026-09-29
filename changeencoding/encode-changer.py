@@ -10,8 +10,8 @@ except ImportError:
     raise
 
 
-SOURCE_DIR = r"C:\encoding\old"
-OUTPUT_DIR = r"C:\encoding\new"
+SOURCE_DIR = r"/home/student/StudioCasestudy/changeencoding/old"
+OUTPUT_DIR = r"/home/student/StudioCasestudy/changeencoding/new"
 AUDIT_FILE = os.path.join(OUTPUT_DIR, "conversion_audit.csv")
 
 

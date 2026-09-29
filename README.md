@@ -1,8 +1,9 @@
 # SAS Studio Overview Case Studies
 
-This repository contains demonstration assets for SAS Studio on SAS Viya.
+This repository contains demonstration assets and examples for SAS Studio
+and related SAS Viya applications.
 
-The examples are organized into three main areas:
+The repository contains three main demonstration areas:
 
 1. Diabetes Case Study
 2. Clinical Encoding and UTF-8 Migration
@@ -10,58 +11,76 @@ The examples are organized into three main areas:
 
 ---
 
-## 1. Diabetes Case Study
+# 1. Diabetes Case Study
 
-This example supports the SAS Viya Overview Case Study and demonstrates
-data import, data preparation, flows, and reporting.
+In this case study, you will use SAS Viya applications to access, prepare,
+explore, and analyze data related to diabetes diagnoses.
 
-### Case Study
+> **Important:** The steps in this case study must be completed in sequence.
+> The output from one step is used as input to subsequent steps.
 
-In this case study, you will use SAS Viya applications to access, explore,
-and analyze data related to diabetes diagnoses.
+## Case Study Sequence
 
-> **Important:** The steps in the case study must be completed in sequence.
+The case study follows this workflow:
 
-The `Diabetes.csv` file is included in the course files and contains the
-following information.
+### Step 1 - Import the Diabetes Data
 
-### Data Description
+In SAS Studio, create a **new SAS program** and import:
 
-| Feature | Description |
-|---------|-------------|
-| **Class** | Indicates diabetes status. Coded as: **N = Non-Diabetic**, **Y = Diabetic**, **P = Pre-Diabetic**. |
-| **BMI (Body Mass Index)** | A measure of body fat based on height and weight (kg/m²). Obesity (BMI ≥ 30) is a major risk factor for Type 2 diabetes. **Underweight:** < 18.5; **Normal:** 18.5–24.9; **Overweight:** 25–29.9; **Obese:** ≥ 30. |
-| **Age** | Age of the subject in years. Age is an important risk factor for diabetes, with risk increasing with age. |
-| **Gender** | Biological sex of the individual assigned at birth. Coded as: **0 = Female**, **1 = Male**. |
-| **Urea** | Measurement of urea in the blood (mg/dL). Elevated levels may indicate kidney issues. **Normal range:** approximately 7–20 mg/dL. |
-| **Cr (Creatinine)** | Measures creatinine in the blood (mg/dL) and is a marker of kidney function. Elevated levels may suggest impaired kidney function. **Normal range:** approximately 0.6–1.3 mg/dL. |
-| **HbA1c (Glycated Hemoglobin)** | Indicator of average blood glucose levels over the preceding 2–3 months. Expressed as a percentage. **Non-Diabetic:** < 5.7%; **Pre-Diabetic:** 5.7–6.4%; **Diabetic:** ≥ 6.5%. |
-| **Chol (Cholesterol)** | Total cholesterol in the blood (mg/dL). **Normal:** < 200 mg/dL. |
-| **TG (Triglycerides)** | Measures the amount of triglycerides in the blood (mg/dL). **Normal:** < 150 mg/dL. |
-| **HDL (High-Density Lipoprotein)** | Often referred to as "good" cholesterol (mg/dL). Higher levels are generally considered better. **Ideal:** > 40 mg/dL for men and > 50 mg/dL for women. |
-| **LDL (Low-Density Lipoprotein)** | Often referred to as "bad" cholesterol (mg/dL). **Optimal:** < 100 mg/dL. |
-| **VLDL (Very Low-Density Lipoprotein)** | Another form of cholesterol (mg/dL) that carries triglycerides. It is often estimated from TG/5. **Normal range:** 2–30 mg/dL. |
+`Diabetes.csv`
 
-### Data Sources
+The file:
 
-**Original data source**
+`Diabetes_structure.csv`
 
-Rashid, Ahlam (2020), *Diabetes Dataset*, Mendeley Data, V1.  
-DOI: https://data.mendeley.com/datasets/wj9rwkp9c2/1
+contains the structure information used during the import step.
 
-**Supplemental feature descriptions**
+### Step 2 - Prepare the Data
 
-[Multiclass Diabetes Dataset - Kaggle](https://www.kaggle.com/datasets/yasserhessein/multiclass-diabetes-dataset)
+Run the SAS program:
 
-### Files
+`diabetesDataPrep.sas`
 
-| File | Description |
-|------|-------------|
-| `Diabetes.csv` | Source data used in the case study |
-| `Diabetes_structure.csv` | Structure information used during the import step |
-| `diabetesDataPrep.sas` | SAS program for preparing the diabetes data |
-| `diabetes_flow.flw` | SAS Studio flow containing the diabetes data preparation process |
-| `diabetesReportFinal.json` | JSON package containing the Diabetes Report |
+This program performs the data preparation for the case study and creates
+the following CAS table:
+
+`CASUSER.DIABETESFINAL`
+
+### Step 3 - Explore the Results in SAS Visual Analytics
+
+The CAS table:
+
+`CASUSER.DIABETESFINAL`
+
+is used as the data source for the SAS Visual Analytics report:
+
+**DiabetesFinal**
+
+The report package is provided in:
+
+`diabetesReportFinal.json`
+
+and can be imported into SAS Viya.
+
+## Workflow Summary
+
+```text
+Diabetes.csv
+     |
+     v
+Import the data using a new SAS Studio program
+     |
+     v
+Run diabetesDataPrep.sas
+     |
+     v
+CASUSER.DIABETESFINAL
+     |
+     v
+SAS Visual Analytics
+     |
+     v
+DiabetesFinal Report
 
 ---
 

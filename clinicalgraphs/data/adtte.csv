@@ -1,0 +1,181 @@
+USUBJID,PARAMCD,PARAM,TRT01P,AGEGR1,SEX,REGION,ECOG,AVAL,CNSR
+XYZ123-0101,OS,Overall Survival (days),Placebo,<65,F,Asia,0,645,1
+XYZ123-0102,OS,Overall Survival (days),Drug A 10 mg,<65,F,Asia,1,273,1
+XYZ123-0103,OS,Overall Survival (days),Drug A 20 mg,>=65,M,Europe,0,497,1
+XYZ123-0104,OS,Overall Survival (days),Placebo,<65,F,Europe,1,442,1
+XYZ123-0105,OS,Overall Survival (days),Drug A 10 mg,<65,F,Asia,1,394,0
+XYZ123-0106,OS,Overall Survival (days),Drug A 20 mg,<65,F,North America,1,555,1
+XYZ123-0107,OS,Overall Survival (days),Placebo,>=65,F,Asia,0,118,0
+XYZ123-0108,OS,Overall Survival (days),Drug A 10 mg,>=65,M,Asia,1,444,1
+XYZ123-0109,OS,Overall Survival (days),Drug A 20 mg,>=65,F,Europe,1,229,0
+XYZ123-0110,OS,Overall Survival (days),Placebo,<65,F,North America,1,224,0
+XYZ123-0111,OS,Overall Survival (days),Drug A 10 mg,>=65,M,North America,1,43,0
+XYZ123-0112,OS,Overall Survival (days),Drug A 20 mg,<65,F,Asia,1,20,0
+XYZ123-0113,OS,Overall Survival (days),Placebo,>=65,F,North America,1,22,0
+XYZ123-0114,OS,Overall Survival (days),Drug A 10 mg,<65,M,Europe,0,349,0
+XYZ123-0115,OS,Overall Survival (days),Drug A 20 mg,<65,F,North America,0,505,1
+XYZ123-0116,OS,Overall Survival (days),Placebo,>=65,M,Europe,1,183,0
+XYZ123-0117,OS,Overall Survival (days),Drug A 10 mg,>=65,F,Asia,1,9,0
+XYZ123-0118,OS,Overall Survival (days),Drug A 20 mg,>=65,F,North America,1,78,0
+XYZ123-0119,OS,Overall Survival (days),Placebo,<65,F,North America,0,29,0
+XYZ123-0120,OS,Overall Survival (days),Drug A 10 mg,<65,M,Asia,1,124,0
+XYZ123-0121,OS,Overall Survival (days),Drug A 20 mg,>=65,F,Europe,1,238,1
+XYZ123-0122,OS,Overall Survival (days),Placebo,>=65,F,Asia,1,263,1
+XYZ123-0123,OS,Overall Survival (days),Drug A 10 mg,>=65,M,North America,1,680,1
+XYZ123-0124,OS,Overall Survival (days),Drug A 20 mg,>=65,M,North America,1,363,1
+XYZ123-0125,OS,Overall Survival (days),Placebo,>=65,M,North America,1,191,0
+XYZ123-0126,OS,Overall Survival (days),Drug A 10 mg,<65,F,North America,1,566,1
+XYZ123-0127,OS,Overall Survival (days),Drug A 20 mg,<65,M,Asia,1,276,0
+XYZ123-0128,OS,Overall Survival (days),Placebo,<65,F,Europe,0,422,1
+XYZ123-0129,OS,Overall Survival (days),Drug A 10 mg,<65,F,Asia,0,282,0
+XYZ123-0130,OS,Overall Survival (days),Drug A 20 mg,<65,M,Europe,0,312,0
+XYZ123-0131,OS,Overall Survival (days),Placebo,>=65,F,Europe,0,266,0
+XYZ123-0132,OS,Overall Survival (days),Drug A 10 mg,>=65,F,Asia,0,209,1
+XYZ123-0133,OS,Overall Survival (days),Drug A 20 mg,<65,F,Asia,0,404,1
+XYZ123-0134,OS,Overall Survival (days),Placebo,>=65,M,North America,0,10,0
+XYZ123-0135,OS,Overall Survival (days),Drug A 10 mg,<65,F,Asia,1,63,0
+XYZ123-0136,OS,Overall Survival (days),Drug A 20 mg,>=65,M,Asia,0,342,1
+XYZ123-0137,OS,Overall Survival (days),Placebo,>=65,M,Europe,1,170,0
+XYZ123-0138,OS,Overall Survival (days),Drug A 10 mg,<65,M,North America,1,11,0
+XYZ123-0139,OS,Overall Survival (days),Drug A 20 mg,<65,M,Asia,1,396,0
+XYZ123-0140,OS,Overall Survival (days),Placebo,>=65,F,North America,1,39,0
+XYZ123-0141,OS,Overall Survival (days),Drug A 10 mg,<65,F,North America,0,103,0
+XYZ123-0142,OS,Overall Survival (days),Drug A 20 mg,<65,M,North America,1,101,0
+XYZ123-0143,OS,Overall Survival (days),Placebo,>=65,M,Asia,0,35,0
+XYZ123-0144,OS,Overall Survival (days),Drug A 10 mg,>=65,M,Europe,0,412,1
+XYZ123-0145,OS,Overall Survival (days),Drug A 20 mg,<65,M,North America,0,3,0
+XYZ123-0146,OS,Overall Survival (days),Placebo,>=65,M,Europe,0,91,0
+XYZ123-0147,OS,Overall Survival (days),Drug A 10 mg,<65,M,Asia,0,312,0
+XYZ123-0148,OS,Overall Survival (days),Drug A 20 mg,>=65,F,North America,1,48,0
+XYZ123-0149,OS,Overall Survival (days),Placebo,<65,F,North America,0,316,1
+XYZ123-0150,OS,Overall Survival (days),Drug A 10 mg,>=65,M,North America,1,626,1
+XYZ123-0151,OS,Overall Survival (days),Drug A 20 mg,>=65,F,North America,1,446,0
+XYZ123-0152,OS,Overall Survival (days),Placebo,<65,F,Asia,1,219,1
+XYZ123-0153,OS,Overall Survival (days),Drug A 10 mg,>=65,M,Asia,1,719,1
+XYZ123-0154,OS,Overall Survival (days),Drug A 20 mg,<65,M,Europe,0,639,0
+XYZ123-0155,OS,Overall Survival (days),Placebo,<65,F,Asia,1,217,0
+XYZ123-0156,OS,Overall Survival (days),Drug A 10 mg,>=65,M,Europe,1,678,1
+XYZ123-0157,OS,Overall Survival (days),Drug A 20 mg,<65,F,Asia,0,545,1
+XYZ123-0158,OS,Overall Survival (days),Placebo,<65,F,Asia,0,225,1
+XYZ123-0159,OS,Overall Survival (days),Drug A 10 mg,>=65,F,Asia,0,40,0
+XYZ123-0160,OS,Overall Survival (days),Drug A 20 mg,<65,F,Europe,1,177,0
+XYZ123-0161,OS,Overall Survival (days),Placebo,<65,M,Asia,0,223,1
+XYZ123-0162,OS,Overall Survival (days),Drug A 10 mg,>=65,M,Asia,0,238,1
+XYZ123-0163,OS,Overall Survival (days),Drug A 20 mg,>=65,F,Asia,0,490,1
+XYZ123-0164,OS,Overall Survival (days),Placebo,>=65,F,Europe,1,238,0
+XYZ123-0165,OS,Overall Survival (days),Drug A 10 mg,>=65,M,Europe,1,326,0
+XYZ123-0166,OS,Overall Survival (days),Drug A 20 mg,>=65,F,Europe,0,30,0
+XYZ123-0167,OS,Overall Survival (days),Placebo,<65,M,Europe,1,231,0
+XYZ123-0168,OS,Overall Survival (days),Drug A 10 mg,<65,M,Asia,1,117,0
+XYZ123-0169,OS,Overall Survival (days),Drug A 20 mg,>=65,F,Asia,0,247,1
+XYZ123-0170,OS,Overall Survival (days),Placebo,>=65,F,Asia,0,295,1
+XYZ123-0171,OS,Overall Survival (days),Drug A 10 mg,>=65,F,Asia,0,114,0
+XYZ123-0172,OS,Overall Survival (days),Drug A 20 mg,>=65,F,North America,1,379,1
+XYZ123-0173,OS,Overall Survival (days),Placebo,>=65,M,Asia,1,98,0
+XYZ123-0174,OS,Overall Survival (days),Drug A 10 mg,<65,F,Asia,1,78,0
+XYZ123-0175,OS,Overall Survival (days),Drug A 20 mg,>=65,M,North America,1,228,0
+XYZ123-0176,OS,Overall Survival (days),Placebo,>=65,M,Asia,1,42,0
+XYZ123-0177,OS,Overall Survival (days),Drug A 10 mg,<65,M,Asia,0,613,1
+XYZ123-0178,OS,Overall Survival (days),Drug A 20 mg,<65,M,Europe,0,451,1
+XYZ123-0179,OS,Overall Survival (days),Placebo,<65,F,Asia,1,355,0
+XYZ123-0180,OS,Overall Survival (days),Drug A 10 mg,<65,F,Asia,0,163,0
+XYZ123-0181,OS,Overall Survival (days),Drug A 20 mg,>=65,F,North America,1,66,0
+XYZ123-0182,OS,Overall Survival (days),Placebo,<65,F,Asia,0,143,0
+XYZ123-0183,OS,Overall Survival (days),Drug A 10 mg,<65,M,Asia,0,289,0
+XYZ123-0184,OS,Overall Survival (days),Drug A 20 mg,>=65,F,Europe,0,452,0
+XYZ123-0185,OS,Overall Survival (days),Placebo,<65,M,North America,1,132,0
+XYZ123-0186,OS,Overall Survival (days),Drug A 10 mg,>=65,F,North America,0,376,0
+XYZ123-0187,OS,Overall Survival (days),Drug A 20 mg,<65,M,Asia,0,147,0
+XYZ123-0188,OS,Overall Survival (days),Placebo,>=65,F,Asia,1,84,0
+XYZ123-0189,OS,Overall Survival (days),Drug A 10 mg,<65,M,Asia,0,473,0
+XYZ123-0190,OS,Overall Survival (days),Drug A 20 mg,>=65,M,Europe,0,363,1
+XYZ123-0191,OS,Overall Survival (days),Placebo,>=65,F,Europe,1,227,0
+XYZ123-0192,OS,Overall Survival (days),Drug A 10 mg,>=65,M,North America,1,176,0
+XYZ123-0193,OS,Overall Survival (days),Drug A 20 mg,>=65,F,Asia,1,513,1
+XYZ123-0194,OS,Overall Survival (days),Placebo,>=65,M,Europe,1,83,0
+XYZ123-0195,OS,Overall Survival (days),Drug A 10 mg,<65,F,Europe,1,522,1
+XYZ123-0196,OS,Overall Survival (days),Drug A 20 mg,>=65,M,Asia,0,377,0
+XYZ123-0197,OS,Overall Survival (days),Placebo,<65,F,North America,1,36,0
+XYZ123-0198,OS,Overall Survival (days),Drug A 10 mg,<65,M,Europe,0,365,1
+XYZ123-0199,OS,Overall Survival (days),Drug A 20 mg,>=65,M,North America,1,283,0
+XYZ123-0200,OS,Overall Survival (days),Placebo,<65,M,Europe,0,176,0
+XYZ123-0201,OS,Overall Survival (days),Drug A 10 mg,>=65,F,Asia,1,69,0
+XYZ123-0202,OS,Overall Survival (days),Drug A 20 mg,>=65,M,Asia,0,3,0
+XYZ123-0203,OS,Overall Survival (days),Placebo,<65,F,North America,1,30,0
+XYZ123-0204,OS,Overall Survival (days),Drug A 10 mg,>=65,M,North America,0,236,1
+XYZ123-0205,OS,Overall Survival (days),Drug A 20 mg,<65,F,North America,1,263,0
+XYZ123-0206,OS,Overall Survival (days),Placebo,<65,M,Europe,1,440,0
+XYZ123-0207,OS,Overall Survival (days),Drug A 10 mg,<65,M,Europe,0,333,1
+XYZ123-0208,OS,Overall Survival (days),Drug A 20 mg,<65,F,Europe,1,418,1
+XYZ123-0209,OS,Overall Survival (days),Placebo,>=65,M,Asia,0,105,0
+XYZ123-0210,OS,Overall Survival (days),Drug A 10 mg,<65,M,Europe,1,77,0
+XYZ123-0211,OS,Overall Survival (days),Drug A 20 mg,>=65,M,Asia,0,17,0
+XYZ123-0212,OS,Overall Survival (days),Placebo,>=65,F,Asia,1,360,0
+XYZ123-0213,OS,Overall Survival (days),Drug A 10 mg,<65,F,North America,1,414,1
+XYZ123-0214,OS,Overall Survival (days),Drug A 20 mg,<65,M,North America,1,552,1
+XYZ123-0215,OS,Overall Survival (days),Placebo,>=65,M,Europe,0,54,0
+XYZ123-0216,OS,Overall Survival (days),Drug A 10 mg,>=65,F,North America,0,204,0
+XYZ123-0217,OS,Overall Survival (days),Drug A 20 mg,<65,F,North America,1,409,1
+XYZ123-0218,OS,Overall Survival (days),Placebo,>=65,F,North America,1,287,0
+XYZ123-0219,OS,Overall Survival (days),Drug A 10 mg,<65,M,North America,0,329,0
+XYZ123-0220,OS,Overall Survival (days),Drug A 20 mg,>=65,F,North America,1,384,1
+XYZ123-0221,OS,Overall Survival (days),Placebo,<65,M,North America,0,329,1
+XYZ123-0222,OS,Overall Survival (days),Drug A 10 mg,>=65,F,North America,0,220,1
+XYZ123-0223,OS,Overall Survival (days),Drug A 20 mg,>=65,F,North America,1,304,1
+XYZ123-0224,OS,Overall Survival (days),Placebo,<65,F,Europe,1,56,0
+XYZ123-0225,OS,Overall Survival (days),Drug A 10 mg,<65,M,North America,1,365,0
+XYZ123-0226,OS,Overall Survival (days),Drug A 20 mg,>=65,F,North America,0,254,0
+XYZ123-0227,OS,Overall Survival (days),Placebo,>=65,F,North America,0,18,0
+XYZ123-0228,OS,Overall Survival (days),Drug A 10 mg,>=65,M,North America,1,15,0
+XYZ123-0229,OS,Overall Survival (days),Drug A 20 mg,>=65,M,North America,0,222,0
+XYZ123-0230,OS,Overall Survival (days),Placebo,<65,F,Asia,1,160,0
+XYZ123-0231,OS,Overall Survival (days),Drug A 10 mg,<65,F,Asia,1,417,0
+XYZ123-0232,OS,Overall Survival (days),Drug A 20 mg,>=65,F,North America,0,702,1
+XYZ123-0233,OS,Overall Survival (days),Placebo,<65,M,Asia,0,101,0
+XYZ123-0234,OS,Overall Survival (days),Drug A 10 mg,>=65,F,Europe,0,468,1
+XYZ123-0235,OS,Overall Survival (days),Drug A 20 mg,>=65,F,Asia,1,386,1
+XYZ123-0236,OS,Overall Survival (days),Placebo,<65,M,Asia,0,148,0
+XYZ123-0237,OS,Overall Survival (days),Drug A 10 mg,<65,M,North America,0,230,0
+XYZ123-0238,OS,Overall Survival (days),Drug A 20 mg,>=65,M,Asia,0,527,0
+XYZ123-0239,OS,Overall Survival (days),Placebo,>=65,M,Asia,1,578,0
+XYZ123-0240,OS,Overall Survival (days),Drug A 10 mg,<65,M,Europe,1,344,0
+XYZ123-0241,OS,Overall Survival (days),Drug A 20 mg,>=65,M,Europe,0,658,1
+XYZ123-0242,OS,Overall Survival (days),Placebo,>=65,F,North America,1,9,0
+XYZ123-0243,OS,Overall Survival (days),Drug A 10 mg,>=65,F,North America,1,81,0
+XYZ123-0244,OS,Overall Survival (days),Drug A 20 mg,>=65,F,Europe,1,346,0
+XYZ123-0245,OS,Overall Survival (days),Placebo,<65,M,North America,1,172,0
+XYZ123-0246,OS,Overall Survival (days),Drug A 10 mg,>=65,F,Europe,1,13,0
+XYZ123-0247,OS,Overall Survival (days),Drug A 20 mg,>=65,F,North America,0,58,0
+XYZ123-0248,OS,Overall Survival (days),Placebo,<65,F,Europe,1,39,0
+XYZ123-0249,OS,Overall Survival (days),Drug A 10 mg,>=65,M,Asia,1,424,0
+XYZ123-0250,OS,Overall Survival (days),Drug A 20 mg,>=65,F,Asia,1,421,1
+XYZ123-0251,OS,Overall Survival (days),Placebo,>=65,M,Europe,0,116,0
+XYZ123-0252,OS,Overall Survival (days),Drug A 10 mg,>=65,F,Asia,0,43,0
+XYZ123-0253,OS,Overall Survival (days),Drug A 20 mg,<65,M,North America,0,226,0
+XYZ123-0254,OS,Overall Survival (days),Placebo,<65,F,Asia,0,253,1
+XYZ123-0255,OS,Overall Survival (days),Drug A 10 mg,<65,F,Asia,1,47,0
+XYZ123-0256,OS,Overall Survival (days),Drug A 20 mg,<65,F,North America,1,494,1
+XYZ123-0257,OS,Overall Survival (days),Placebo,<65,M,Asia,0,199,0
+XYZ123-0258,OS,Overall Survival (days),Drug A 10 mg,<65,M,Asia,0,56,0
+XYZ123-0259,OS,Overall Survival (days),Drug A 20 mg,<65,F,North America,0,87,0
+XYZ123-0260,OS,Overall Survival (days),Placebo,<65,F,Asia,1,253,1
+XYZ123-0261,OS,Overall Survival (days),Drug A 10 mg,<65,F,Europe,0,622,1
+XYZ123-0262,OS,Overall Survival (days),Drug A 20 mg,<65,M,Asia,0,297,0
+XYZ123-0263,OS,Overall Survival (days),Placebo,>=65,F,Asia,0,29,0
+XYZ123-0264,OS,Overall Survival (days),Drug A 10 mg,>=65,M,Asia,1,231,0
+XYZ123-0265,OS,Overall Survival (days),Drug A 20 mg,<65,F,Asia,1,233,1
+XYZ123-0266,OS,Overall Survival (days),Placebo,<65,F,Europe,0,194,0
+XYZ123-0267,OS,Overall Survival (days),Drug A 10 mg,>=65,M,Europe,0,416,1
+XYZ123-0268,OS,Overall Survival (days),Drug A 20 mg,>=65,F,North America,0,236,1
+XYZ123-0269,OS,Overall Survival (days),Placebo,<65,M,Europe,1,374,0
+XYZ123-0270,OS,Overall Survival (days),Drug A 10 mg,>=65,M,Europe,0,232,0
+XYZ123-0271,OS,Overall Survival (days),Drug A 20 mg,<65,F,Europe,1,100,0
+XYZ123-0272,OS,Overall Survival (days),Placebo,<65,F,Asia,1,277,0
+XYZ123-0273,OS,Overall Survival (days),Drug A 10 mg,>=65,F,Asia,0,125,0
+XYZ123-0274,OS,Overall Survival (days),Drug A 20 mg,>=65,F,Asia,1,568,1
+XYZ123-0275,OS,Overall Survival (days),Placebo,<65,M,Asia,0,136,0
+XYZ123-0276,OS,Overall Survival (days),Drug A 10 mg,<65,M,North America,0,222,0
+XYZ123-0277,OS,Overall Survival (days),Drug A 20 mg,<65,M,Europe,1,466,0
+XYZ123-0278,OS,Overall Survival (days),Placebo,<65,F,Europe,0,115,0
+XYZ123-0279,OS,Overall Survival (days),Drug A 10 mg,>=65,F,Asia,1,365,1
+XYZ123-0280,OS,Overall Survival (days),Drug A 20 mg,>=65,M,North America,1,521,1

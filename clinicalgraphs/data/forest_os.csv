@@ -1,0 +1,11 @@
+SUBGROUP,CATEGORY,N,HR,LCL,UCL
+Overall,All patients,180,0.76,0.64,0.91
+Age group,<65,77,0.81,0.63,1.03
+Age group,>=65,78,0.65,0.4,1.07
+Sex,Male,101,0.71,0.52,0.96
+Sex,Female,78,0.81,0.57,1.14
+Region,Europe,76,0.87,0.62,1.23
+Region,North America,85,0.78,0.5,1.22
+Region,Asia,60,0.72,0.44,1.18
+ECOG,0,104,0.67,0.46,0.99
+ECOG,1,58,0.65,0.41,1.02

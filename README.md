@@ -5,7 +5,7 @@ and related SAS Viya applications.
 
 The repository contains three main demonstration areas:
 
-1. Diabetes Case Study
+1. SAS Studio Flows: Diabetes Case Study
 2. Clinical Encoding and UTF-8 Migration
 3. [Clinical Graphs](clinicalgraphs/README.md)
 
